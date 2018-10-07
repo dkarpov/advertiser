@@ -1,19 +1,22 @@
 export default class Element {
     constructor(params) {
         this.reference = null;
-        this.makeReference(params);
     }
 
-    makeReference(params = {}) {
+    createElement(params = {}) {
     }
 
     getReference() {
         return this.reference;
     }
 
+    addEventListeners() {
+        console.log('adding handlers to ', this);
+    }
+
     connect(domObject) {
         console.log('connect', this);
-        alert('connected');
         domObject.insertAdjacentHTML('beforeend', this.getReference());
+        this.addEventListeners();
     }
 }

@@ -1,5 +1,5 @@
 import './advertiser.less';
-import AdvertiseList from './modules/advertise-list/index.js';
+import AdvertiseList from './modules/advertise-list';
 
 function init() {
     AdvertiseList('hey');
